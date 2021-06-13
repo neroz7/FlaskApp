@@ -1,6 +1,4 @@
-# Project1-Group39
-
-Group Image available [here](http://a40ff75cdce02380039a825884964b5e117af09561845c13679abcb87fe4.project.ssof.rnl.tecnico.ulisboa.pt/)
+WORK PRESENTED FOR THE SOFTWARE SECURITY COURSE OF IST
 
 ## SQL Injection
 
