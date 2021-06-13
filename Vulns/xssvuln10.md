@@ -1,0 +1,16 @@
+# Vulnerability 10: Attacker can inject javascript into the `name` input field in the `/update_profile` form, add a victim user as a friend via `/add_friend` and should the victim accept this friend request, further searches for the attacker's username via `/search_friend` will reflect the malicious script on victims browser
+
+- Vulnerability: Stored XSS 
+- Where: `name` field in `/update_profile's` multipart post-form
+- Impact: The malicious javascript that the attacker stored on the `bane` field of his profile, should the victim accept the attacker's friend request, will be executed on victims browser when he searches the attacker's profile via `/search_friend`
+## Steps to reproduce
+
+1. Create an account 
+2. Click on your `profile`, write the prefered javascript on the `name` field and save it, there is no char limit
+3. Click on `add friend` 
+3. Type the `username` that you want to attack
+4. Wait for the victim to accept your friend request
+5. Wait for victim to search for the attacker's username
+6. Your malicious javascript will now run when the victim searches the attackers profile via `/search_friend`
+
+[(POC)](xssvuln10.py)
